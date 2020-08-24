@@ -76,15 +76,18 @@ html {
 }
 
 .minhistorie {
-    margin-left: 50rem;
+    margin-left: 15rem;
     margin-right: 40rem;
-    margin-top: 20rem;
-    text-justify: auto;
-    width: 40%;
+    margin-top: 5rem;
 }
 
 .minhistorie img {
     width: 100%;
     overflow: hidden;
     display: block;
+    
+}
+
+.container_text{
+    text-align: right;
 }

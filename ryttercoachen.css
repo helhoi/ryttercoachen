@@ -5,39 +5,151 @@ html {
     font-family: 'Ubuntu', sans-serif;
 }
 
-.topnav a {
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 18px;
-    float: right;
+a {
+    color: #000;
+}
+
+/* header */
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.header li a {
     display: block;
-    color: #f2f2f2;
-    letter-spacing: 2px;
-    padding: 24px;
+    padding: 20px 20px;
     text-decoration: none;
-    margin-right: 2rem;
-    justify-content: space-around;
-    z-index: 1;
-    text-align: right;
-}
-
-.topnav h1{
     color: white;
-    letter-spacing: 8px;
-    position: relative;
-    float: left;
-    text-justify: left;
-    margin-left: 2rem;
-    font-size: 18px;
-    padding: 15px;
+    letter-spacing: 2px;
+    font-size: 15px;
 }
 
-.topnav a:hover {
+.header li a:hover,
+.header .menu-btn:hover {
     color: #F8CB5E;
 }
 
-.topnav a.active {
-    text-decoration: underline;
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 20px;
+    letter-spacing: 8px;
+    margin-left: 1rem;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    float: right;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #F8CB5E;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 20px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #F8CB5E;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+
+}
+
+
+.content {
+    padding: 16px;
 }
 
 .module {
@@ -45,7 +157,6 @@ html {
     background-size: cover;
     width: 100%;
     height: 100%;
-
 }
 
 .lr h1 {
@@ -73,14 +184,99 @@ html {
     letter-spacing: 4px;
 }
 
-.lr h2 {
-    font-family: 'Ubuntu', sans-serif;
-    color: white;
-    letter-spacing: 5px;
-    margin: 0;
-    position: absolute;
-    left: 20px;
-    top: 20px;
+
+@media (max-width: 764px) {
+
+    .lr h1 {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: 3.5rem;
+        position: absolute;
+        text-transform: uppercase;
+        left: 20px;
+        color: white;
+        margin: 0;
+        letter-spacing: 3px;
+    }
+
+    .lr p {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: 1.8rem;
+        position: absolute;
+        bottom: 35px;
+        left: 20px;
+        color: white;
+        margin: 0;
+        letter-spacing: 2px;
+    }
 
 }
 
+@media (max-width: 645px) {
+
+    .lr h1 {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: 3rem;
+        position: absolute;
+        text-transform: uppercase;
+        left: 20px;
+        color: white;
+        margin: 0;
+        letter-spacing: 3px;
+    }
+
+    .lr p {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+        position: absolute;
+        bottom: 35px;
+        left: 20px;
+        color: white;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+
+}
+
+@media (max-width: 570px) {
+
+    .lr h1 {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: 2.5rem;
+        position: absolute;
+        text-transform: uppercase;
+        left: 20px;
+        color: white;
+        margin: 0;
+        letter-spacing: 3px;
+    }
+
+    .lr p {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+        position: absolute;
+        bottom: 35px;
+        left: 20px;
+        color: white;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .lr h1 {
+        display: none;
+    }
+
+    .lr p {
+        display: none;
+    }
+
+}

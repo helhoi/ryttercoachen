@@ -147,34 +147,64 @@ a {
 
 }
 
+/* Slideshow */
 
+.carousel{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0; /* makes it full size */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.carousel-indicators .active{
+    background-color: #F8CB5E;
+}
 
-.content {
-    padding: 16px;
+.carousel-indicators {
+    padding-left: 45rem;
+    margin-bottom: 2.4rem;
+}
+
+.carousel-control-prev {
+    position: absolute;
+    bottom: 0;
+    margin-left: 74rem; 
+}
+
+.carousel-control-next {
+    position: absolute;
+    bottom: 0;
+    margin-left: 74rem; 
+}
+
+.carousel-control-prev, .carousel-control-next {
+    margin-top: 39rem;
 }
 
 
 
+/*
 .module {
     background-image: url("img/horse.jpg");
     background-size: cover;
     width: 100%;
     height: 100%;
-}
+} */
 
 
 .lr h1 {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
-    font-size: 4rem;
+    font-size: 3.9rem;
     position: absolute;
     text-transform: uppercase;
-    bottom: 75px;
+    bottom: 80px;
     left: 20px;
     color: white;
-    margin: 0;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
 }
 
 .lr p {
@@ -185,7 +215,6 @@ a {
     bottom: 35px;
     left: 20px;
     color: white;
-    margin: 0;
     letter-spacing: 4px;
 }
 

@@ -3,33 +3,181 @@ html {
     height: 100%;
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
-    background-color: #2b2b2b;
 }
 
-.container {
-    position: relative;
-    text-align: right;
+a {
+    color: #000;
+}
+
+/* header */
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul {
     margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
 }
 
-.topnav a {
-    font-weight: 500;
-    float: right;
-    color: white;
-    padding: 20px 50px;
+.header li a {
+    display: block;
+    padding: 20px 20px;
     text-decoration: none;
-    font-size: 18px;
-    text-align: right;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 15px;
 }
 
-.topnav a:hover {
+.header li a:hover,
+.header .menu-btn:hover {
     color: #F8CB5E;
 }
 
-.topnav a.active {
-    color: #F8CB5E;
-}
-
-.h1 {
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 20px;
+    letter-spacing: 8px;
+    margin-left: 1rem;
+    padding: 20px 20px;
+    text-decoration: none;
     color: white;
 }
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    float: right;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #F8CB5E;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 20px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #F8CB5E;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+
+}
+
+.flex-container {
+    /* We first create a flex layout context */
+    display: flex;
+    
+    /* Then we define the flow direction 
+       and if we allow the items to wrap 
+     * Remember this is the same as:
+     * flex-direction: row;
+     * flex-wrap: wrap;
+     */
+    flex-flow: row wrap;
+    
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .flex-item {
+    background: tomato;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  

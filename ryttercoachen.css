@@ -164,25 +164,19 @@ a {
 }
 
 .carousel-indicators {
-    padding-left: 45rem;
+    margin-left: 60rem;
     margin-bottom: 2.4rem;
 }
 
-.carousel-control-prev {
-    position: absolute;
-    bottom: 0;
-    margin-left: 74rem; 
-}
-
-.carousel-control-next {
-    position: absolute;
-    bottom: 0;
-    margin-left: 74rem; 
-}
 
 .carousel-control-prev, .carousel-control-next {
-    margin-top: 39rem;
+    margin-top: 41.9rem;
+    margin-left: 74rem; 
+    bottom: 0;
+    display: block;
+    position: absolute;
 }
+
 
 
 

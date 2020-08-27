@@ -149,11 +149,16 @@ a {
 
 /* Slideshow */
 
+.container-lg, .my-3 {
+    height: 100vh;
+    width: 100vw;
+}
+
 .carousel{
     height: 100vh;
     width: 100vw;
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0; /* makes it full size */
+    top: 0; left: 0; right: 0; bottom: 0; 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -164,20 +169,19 @@ a {
 }
 
 .carousel-indicators {
-    margin-left: 60rem;
-    margin-bottom: 2.4rem;
+    left: 0;
+    bottom: 2rem;
+    padding-left: 40rem;
 }
 
 
-.carousel-control-prev, .carousel-control-next {
-    margin-top: 41.9rem;
-    margin-left: 74rem; 
-    bottom: 0;
-    display: block;
-    position: absolute;
+.carousel-control-prev {
+
 }
 
-
+.carousel-control-next {
+  
+}
 
 
 /*

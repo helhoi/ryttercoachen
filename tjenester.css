@@ -155,40 +155,41 @@ a {
     padding: 0;
     margin: 0;
     list-style: none;
-  }
-  
-  .flex-item {
+}
+
+.flex-item {
     background: #333333;
-    width: 505px;
-    height: 312px;
+    width: 173px;
+    height: 414px;
 
-  }
+}
+ /*
+.flex-item,
+p {
+    color: #F8CB5E;
+    margin-top: 5rem;
+    font-size: 12px;
+}
 
-  .flex-item, p {
-      color: #F8CB5E;
-      margin-top: 5rem;
-      font-size: 12px;
-  }
-
-  p {
+p {
     color: #F8CB5E;
     margin-top: 20rem;
     font-size: 12px;
 }
 
-  .flex-item, h1 {
+.flex-item,
+h1 {
     color: white;
     font-size: 18px;
 }
 
-.artikler h1{
-font-size: 70px;
-padding-top: 10rem;
-margin: 0;
-margin-left: 4rem;
-letter-spacing: 6px;
-font-weight: 500;
-opacity: 10%;
+.artikler h1 {
+    font-size: 70px;
+    padding-top: 10rem;
+    margin: 0;
+    margin-left: 4rem;
+    letter-spacing: 6px;
+    font-weight: 500;
+    opacity: 10%;
 }
-
-  
+*/

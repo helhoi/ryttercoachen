@@ -3,12 +3,10 @@ html {
     height: 100%;
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
-    background-color: #2B2B2B;
+    background-color: #2b2b2b;
 }
 
-a {
-    color: #000;
-}
+
 
 /* header */
 
@@ -148,6 +146,18 @@ a {
 
 }
 
+/* ARTIKLER */
+
+.tittel{
+    font-size: 35px;
+    padding-top: 6rem;
+    margin: 0;
+    margin-left: 4rem;
+    letter-spacing: 6px;
+    font-weight: 500;
+    opacity: 20%;
+}
+
 .flex-container {
     display: flex;
     flex-flow: row wrap;
@@ -159,36 +169,34 @@ a {
   
   .flex-item {
     background: #333333;
-    width: 505px;
-    height: 312px;
-
-  }
-
-  .flex-item, p {
-      color: #F8CB5E;
-      margin-top: 5rem;
-      font-size: 12px;
-  }
-
-  p {
-    color: #F8CB5E;
-    margin-top: 20rem;
-    font-size: 12px;
-}
-
-  .flex-item, h1 {
+    padding: 5px;
+    width: 373px;
+    height: 414px;
+    margin-top: 30px;
     color: white;
-    font-size: 18px;
-}
-
-.artikler h1{
-font-size: 70px;
-padding-top: 10rem;
-margin: 0;
-margin-left: 4rem;
-letter-spacing: 6px;
-font-weight: 500;
-opacity: 10%;
-}
-
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
   
+  .flex-item h3 {
+    background: #333333;
+    padding: 5px;
+    margin-top: 10rem;
+    color: white;
+    font-weight: light;
+    font-size: 15px;
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .flex-item p {
+    background: #333333;
+    padding: 5px;
+    margin-top: 1rem;
+    color: white;
+    font-weight: light;
+    font-size: 15px;
+    text-align: left;
+    margin-left: 20px;
+  }

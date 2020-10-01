@@ -4,9 +4,12 @@ html {
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
     background-color: #2b2b2b;
+    scroll-behavior: smooth;
 }
 
-
+* {
+    box-sizing: border-box;
+}
 
 /* header */
 
@@ -146,9 +149,7 @@ html {
 
 }
 
-/* ARTIKLER */
-
-.tittel{
+.tittel {
     font-size: 35px;
     padding-top: 6rem;
     margin: 0;
@@ -158,45 +159,73 @@ html {
     opacity: 20%;
 }
 
-.flex-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+
+
+.grid {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: 7em;
+    max-width: 75%;
+    margin: 0 auto;
+    padding-bottom: 10em;
+    grid-template-columns: auto auto;
   }
-  
-  .flex-item {
-    background: #333333;
-    padding: 5px;
-    width: 373px;
-    height: 414px;
-    margin-top: 30px;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
-    text-align: center;
+
+
+.container{
+    width:505px;
+    height:312px;
   }
-  
-  .flex-item h3 {
-    background: #333333;
-    padding: 5px;
-    margin-top: 10rem;
-    color: white;
-    font-weight: light;
-    font-size: 15px;
-    text-align: left;
-    margin-left: 20px;
+  .imgresponsive{
+    width:100%;
   }
-  
-  .flex-item p {
-    background: #333333;
-    padding: 5px;
-    margin-top: 1rem;
-    color: white;
-    font-weight: light;
-    font-size: 15px;
-    text-align: left;
-    margin-left: 20px;
+  .grow {
+      overflow: hidden;
+      display: block;
   }
+  .grow img {
+       -webkit-transition: all .5s ease;
+       -moz-transition: all .5s ease;
+         -o-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+            transition: all .5s ease;
+            cursor: pointer;
+  }
+  .grow:hover img {
+      margin: -4%;
+      width: 108%;
+
+  }
+
+
+.div .container .grow { 
+    display: block;
+    position: relative;
+ }
+
+a link { 
+    display: block; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100px;
+    opacity: 0;
+    font: 300 36px helvetica, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    transition: all .3s; 
+}
+  a:hover link { 
+      opacity: 1;
+}
+
+p { 
+    font-size: 14px;
+    color: tomato;
+    text-align: relative;
+    margin-top: 20rem;
+
+
+}
+
